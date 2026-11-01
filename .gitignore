@@ -1,0 +1,8 @@
+/loader/
+/dist/
+/test-tools/
+*.log
+*.sav
+*.dll
+*.zip
+__pycache__/
