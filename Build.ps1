@@ -4,7 +4,7 @@ New-Item -ItemType Directory -Path $dist -Force | Out-Null
 $staging=Join-Path $dist ('build-'+[guid]::NewGuid().ToString('N'))
 $package=Join-Path $staging 'HD-CG-Binding-Fix'
 New-Item -ItemType Directory -Path $package -Force | Out-Null
-foreach($name in @('Manage.ps1','Install.cmd','Uninstall.cmd','README.md','LICENSE','ue4ss')){
+foreach($name in @('Manage.ps1','Install.cmd','Uninstall.cmd','README.md','README.en.md','LICENSE','ue4ss')){
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot $name) -Destination (Join-Path $package $name) -Recurse
 }
 $modArchive=Join-Path $dist 'HD-CG-Binding-Fix-1.0.0-mod-only.zip'
